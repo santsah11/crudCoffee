@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Edit coffee</h1>
+    {{drink}}
+    <Div>
+        <form action="/editcoffee/{{drink['id']}}" , method="POST">
+            <p>Coffee Name <input type="text" name=coffee value="{{drink['name']}}"> </p>
+            <p> Coffee Price <input type="number" name="price" step="0.01" value="{{drink['price']}}"> </p>
+            <input type="submit" value='EditCoffee'>
+        </form>
+    </Div>
+</body>
+
+</html>

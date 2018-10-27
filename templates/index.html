@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crud Coffee</title>
+</head>
+
+<body>
+    <h1>Troll Coffee</h1>
+
+    <Div>
+        <form action="/adddrinks" , method="POST">
+            <p>Coffee Name <input type="text" name=coffee> </p>
+            <p> Coffee Price <input type="number" name="price"step ="0.01"></p>
+            <input type="submit" value='addcoffee'>
+        </form>
+    </Div>
+    <h1>All Drinks</h1>
+
+    <div>
+        {% for drinks in alldrinks%}
+        <div id="drink">
+            
+            <p>Coffee Name:{{drinks['name']}}</p>
+            <p> Coffee Price : {{drinks['price']}}</p>
+            <a href="/edit/{{drinks['id']}}">edit</a>
+            <a href="/delete/{{drinks['id']}}">delete</a>
+        </div>
+        {% endfor %}
+    </div>
+    <hr>
+   
+    
+</body>
+
+</html>
